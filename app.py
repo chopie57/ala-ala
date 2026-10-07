@@ -157,6 +157,17 @@ def resize_if_needed(img_bytes):
 st.set_page_config(page_title="Exif & Watermark Editor", layout="centered")
 st.title("📸 Exif & Watermark Editor")
 
+# =========================
+# SISTEM LOGIN SEDERHANA
+# =========================
+password = st.text_input("Masukkan Password untuk mengakses aplikasi:", type="password")
+
+if password != "Buka123":  # Ganti "Buka123" dengan password rahasia Anda
+    st.warning("Silakan masukkan password yang benar.")
+    st.stop() # Perintah ini akan menghentikan semua kode di bawahnya agar tidak dieksekusi
+
+# --- Sisa kode Anda yang lama tetap berada di bawah sini ---
+
 # State Management untuk form
 if "lat" not in st.session_state:
     st.session_state.lat = ""
